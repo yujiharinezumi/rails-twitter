@@ -1,55 +1,50 @@
 <div class="container">
   <header>
     <nav>
-  <ul class="top_menu clearfix">
-    <li><%= link_to '新規投稿', new_blog_path %></li>
-    <li><a href="#">設定</a></li>
-    <li><a href="#">お問い合わせ</a></li>
-  </ul>
-</nav>
+      <ul class="top_menu clearfix">
+        <li><%= link_to '新規投稿', new_blog_path %></li>
+        <li><a href="#">設定</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+    </nav>
   </header>
+
   <%= image_tag 'mig.jpeg', class:'image_area' %>
 
   <div class="wrapper clearfix">
   <aside class="side_menu">
     <nav>
-   <ul>
-    <li><%= link_to '新規投稿', new_blog_path %></li>
-     <li><a href="#">設定</a></li>
-     <li><a href="#">お問い合わせ</a></li>
-   </ul>
- </nav>
- <p class="banner">
-     <a href="#">
-         <%= image_tag 'harihari.jpg' %>
-     </a>
-   </p>
+     <ul>
+       <li><%= link_to '新規投稿', new_blog_path %></li>
+       <li><a href="#">設定</a></li>
+       <li><a href="#">お問い合わせ</a></li>
+     </ul>
+     </nav>
+     <p class="banner">
+         <a href="#"><%= image_tag 'harihari.jpg' %></a>
+    </p>
   </aside>
 
-  <article class="content">
-    <table>
-      <tr>
-        <th>ブログの投稿一覧です！！</th>
-      </tr>
+    <article class="content">
+      <table>
+        <tr>
+          <th>ブログの投稿一覧です！！</th>
+        </tr>
 
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.content %></td>
+      <% @blogs.each do |blog| %>
+        <tr>
+          <td><%= blog.content %></td>
+          <td><%= link_to '詳細を確認する', blog_path(blog.id) %></td>
+          <td><%= link_to 'ブログを編集する', edit_blog_path(blog.id) %></td>
+          <td><%= link_to 'ブログを削除する', blog_path(blog.id), method: :delete %></td>
+        </tr>
+      <% end %>
+      </table>
+      <p><%= notice %></p>
+      <%= link_to 'ブログの新規作成', new_blog_path,class:"btn-gradient-3d-simple" %>
+    </article>
+  </div>
 
-        <td><%= link_to '詳細を確認する', blog_path(blog.id) %></td>
-        <td><%= link_to 'ブログを編集する', edit_blog_path(blog.id) %></td>
-        <td><%= link_to 'ブログを削除する', blog_path(blog.id), method: :delete %></td>
-
-      </tr>
-    <% end %>
-    </table>
-    <p><%= notice %></p>
-    <%= link_to 'ブログの新規作成', new_blog_path,class:"btn-gradient-3d-simple" %>
-  </article>
-
-
-
-</div>
   <footer class="footer">
     <p>Copyright © 2019 YUJI SUGAYA HARINEZUMI.</p>
   </footer>

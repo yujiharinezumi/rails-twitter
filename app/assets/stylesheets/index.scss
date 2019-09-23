@@ -29,11 +29,8 @@ ul {
   padding: 0;
 }
 
-
 li {
-
   list-style: none;
-  // margin-left: 200px;
 }
 
 .top_menu li a {
@@ -45,8 +42,6 @@ li {
   width: 100%;
   height:600px;
 }
-
-
 
 .menu{
     padding-bottom: 100px;
@@ -80,8 +75,6 @@ li {
 
 .content{
   float: left;
-  // height: 400px;
-  // background-color: #3399FF;
 }
 
 
@@ -103,8 +96,6 @@ li {
   border-bottom: solid 3px #5e7fca;
   margin-left: 500px;
   margin-top:50px;
-
-
 }
 
 .btn-gradient-3d-simple:active {
@@ -114,12 +105,10 @@ li {
   border-bottom: none;
 }
 
-
 table{
   height:400px;
   background-color: #3399FF;
   width:1100px;
-
 }
 
 table td{
@@ -128,7 +117,6 @@ table td{
 
 table, td, th {
 border: 3px blue solid;
-
 }
 
 .footer{
@@ -137,6 +125,7 @@ border: 3px blue solid;
   width: 100%;
   position: absolute;
   bottom: 0;
+  position:fixed;
 }
 
 .footer p {
@@ -144,5 +133,4 @@ border: 3px blue solid;
   color: #fff;
   text-align: center;
   margin-top:40px;
-
 }
