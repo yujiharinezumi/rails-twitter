@@ -3,8 +3,7 @@
     <!-- <h1>ブログ一覧</h1> -->
     <nav>
   <ul class="top_menu clearfix">
-    <li><a href="#">ホーム</a></li>
-    <li><a href="#">新規投稿</a></li>
+    <li><%= link_to '新規投稿', new_blog_path %></li>
     <li><a href="#">設定</a></li>
     <li><a href="#">お問い合わせ</a></li>
   </ul>
@@ -12,12 +11,23 @@
   </header>
   <%= image_tag 'mig.jpeg', class:'image_area' %>
 
+  <div class="wrapper clearfix">
+  <aside class="side_menu">
+    <nav>
+   <ul>
+    <li><%= link_to '新規投稿', new_blog_path %></li>
+     <li><a href="#">設定</a></li>
+     <li><a href="#">お問い合わせ</a></li>
+   </ul>
+ </nav>
+ <p class="banner">
+     <a href="#">
+         <%= image_tag 'harihari.jpg' %>
+     </a>
+   </p>
+  </aside>
 
-
-
-  <div class="menu">
-    <p><%= notice %></p>
-
+  <article class="content">
     <table>
       <tr>
         <th>ブログの投稿一覧です！！</th>
@@ -34,10 +44,14 @@
       </tr>
     <% end %>
     </table>
-    <%= link_to 'ブログの新規作成', new_blog_path %>
-  </div>
+    <p><%= notice %></p>
+    <%= link_to 'ブログの新規作成', new_blog_path,class:"btn-gradient-3d-simple" %>
+  </article>
 
+
+
+</div>
   <footer class="footer">
-    <p>Copyright © 2019 YUJI SUGAYA TWITTER CLONE.</p>
+    <p>Copyright © 2019 YUJI SUGAYA HARINEZUMI.</p>
   </footer>
 </div>
