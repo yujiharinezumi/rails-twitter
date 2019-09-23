@@ -13,9 +13,9 @@
 
   <div class= "blog_content">
     <%= form.label :content %>
-    <%= form.text_field :content %>
+    <%= form.text_area :content %>
   </div>
-  <%= form.submit %>
+  <%= form.submit%>
   <% end %>
 
-<%= link_to "ブログ一覧画面に戻る", blogs_path %>
+<%= link_to "ブログ一覧画面に戻る", blogs_path,class:"btn-gradient-3d-simple"  %>
