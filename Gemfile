@@ -5,8 +5,6 @@ ruby '2.6.3'
 
 #Core
 gem 'rails', '~> 5.2.3'
-
-
 #Middlewarte
 gem 'pg', '>= 0.18', '< 2.0'
 
@@ -24,6 +22,8 @@ gem 'turbolinks', '~> 5'
 
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
+
+# gem 'bootstrap', '~> 4.2.1'
 
 group :development, :test do
 
